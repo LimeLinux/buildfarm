@@ -1,0 +1,9 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# Finds out possible leaks from buildfarm queues
+
+from buildfarm import utils
+
+if __name__ == "__main__":
+    print "\n".join(utils.filter_pspec_list(utils.get_local_repo_pspecs(), verbose = False))
