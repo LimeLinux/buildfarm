@@ -87,7 +87,7 @@ def send(msg, pspec = "", _type = "", subject=""):
                                      }
 
     try:
-        session = smtplib.SMTP(conf.smtpserver, timeout=10)
+        session = smtplib.SMTP("smtp.limelinux.com",587) 
         session.ehlo()
         session.starttls()
         session.ehlo
